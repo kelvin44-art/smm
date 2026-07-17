@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings – Akiba Hub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">🏦 Akiba<span>Hub</span></div>
+    <nav>
+      <a href="dashboard.html" title="Dashboard"><span class="icon">📊</span><span class="label">Dashboard</span></a>
+      <a href="wallet.html" title="My Wallet"><span class="icon">👛</span><span class="label">My Wallet</span></a>
+      <a href="groups.html" title="Groups"><span class="icon">👥</span><span class="label">Groups</span></a>
+      <a href="proposals.html" title="Proposals"><span class="icon">📋</span><span class="label">Proposals</span></a>
+      <a href="transactions.html" title="Transactions"><span class="icon">📈</span><span class="label">Transactions</span></a>
+      <a href="settings.html" class="active" title="Settings"><span class="icon">⚙️</span><span class="label">Settings</span></a>
+      <a href="#" id="logout-btn" title="Logout"><span class="icon">🚪</span><span class="label">Logout</span></a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <h1>⚙️ Settings</h1>
+
+    <div class="card">
+      <h3>👤 Update Profile</h3>
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <div class="input-wrapper">
+          <div class="glow-ring"></div>
+          <input type="text" id="fullname" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <div class="phone-input">
+          <span class="prefix">+254</span>
+          <div class="input-wrapper" style="flex:1;">
+            <div class="glow-ring"></div>
+            <input type="tel" id="phone" data-phone />
+          </div>
+        </div>
+      </div>
+      <button id="update-profile" class="btn-primary"><span class="wrap">💾 Update Profile</span></button>
+    </div>
+
+    <div class="card mt-20">
+      <h3>🔑 Change Password</h3>
+      <div class="form-group">
+        <label for="current-password">Current Password</label>
+        <div class="password-wrapper input-wrapper">
+          <div class="glow-ring"></div>
+          <input type="password" id="current-password" />
+          <button type="button" class="toggle-password">👁️</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="new-password">New Password</label>
+        <div class="password-wrapper input-wrapper">
+          <div class="glow-ring"></div>
+          <input type="password" id="new-password" />
+          <button type="button" class="toggle-password">👁️</button>
+        </div>
+      </div>
+      <button id="change-password" class="btn-primary"><span class="wrap">🔄 Change Password</span></button>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/pages/settings.js"></script>
+</body>
+</html>

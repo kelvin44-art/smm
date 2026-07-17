@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard – Akiba Hub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">🏦 Akiba<span>Hub</span></div>
+    <nav>
+      <a href="dashboard.html" class="active" title="Dashboard"><span class="icon">📊</span><span class="label">Dashboard</span></a>
+      <a href="wallet.html" title="My Wallet"><span class="icon">👛</span><span class="label">My Wallet</span></a>
+      <a href="groups.html" title="Groups"><span class="icon">👥</span><span class="label">Groups</span></a>
+      <a href="proposals.html" title="Proposals"><span class="icon">📋</span><span class="label">Proposals</span></a>
+      <a href="transactions.html" title="Transactions"><span class="icon">📈</span><span class="label">Transactions</span></a>
+      <a href="settings.html" title="Settings"><span class="icon">⚙️</span><span class="label">Settings</span></a>
+      <a href="#" id="logout-btn" title="Logout"><span class="icon">🚪</span><span class="label">Logout</span></a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <h1>Dashboard</h1>
+
+    <div class="card personal-savings">
+      <h3>💳 Personal Savings</h3>
+      <div class="stat-card">
+        <div class="number" id="personal-balance">0.00</div>
+        <div class="label">KES</div>
+      </div>
+      <div class="quick-actions">
+        <button id="quick-deposit" class="btn-primary"><span class="wrap">➕ Deposit</span></button>
+        <button id="quick-withdraw" class="btn-primary"><span class="wrap">➖ Withdraw</span></button>
+        <a href="wallet.html" class="btn-outline">View Wallet →</a>
+      </div>
+    </div>
+
+    <div id="groups-section" class="hidden">
+      <div class="card mt-20">
+        <h3>👥 Savings Groups</h3>
+        <div id="groups-summary"></div>
+        <div class="mt-20">
+          <a href="groups.html" class="btn-primary"><span class="wrap">Manage Groups</span></a>
+        </div>
+      </div>
+      <div class="card mt-20">
+        <h3>📋 Recent Proposals</h3>
+        <div id="recent-proposals"></div>
+      </div>
+    </div>
+
+    <div id="solo-saver-prompt" class="card mt-20">
+      <h3>💪 You're saving solo!</h3>
+      <p>Want to save together with friends? Create or join a group now.</p>
+      <div class="welcome-actions">
+        <a href="groups.html" class="btn-primary"><span class="wrap">Create a Savings Group</span></a>
+        <button id="quick-join-group" class="btn-secondary">Join a Group</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/pages/dashboard.js"></script>
+</body>
+</html>

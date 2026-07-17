@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transactions – Akiba Hub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">🏦 Akiba<span>Hub</span></div>
+    <nav>
+      <a href="dashboard.html" title="Dashboard"><span class="icon">📊</span><span class="label">Dashboard</span></a>
+      <a href="wallet.html" title="My Wallet"><span class="icon">👛</span><span class="label">My Wallet</span></a>
+      <a href="groups.html" title="Groups"><span class="icon">👥</span><span class="label">Groups</span></a>
+      <a href="proposals.html" title="Proposals"><span class="icon">📋</span><span class="label">Proposals</span></a>
+      <a href="transactions.html" class="active" title="Transactions"><span class="icon">📈</span><span class="label">Transactions</span></a>
+      <a href="settings.html" title="Settings"><span class="icon">⚙️</span><span class="label">Settings</span></a>
+      <a href="#" id="logout-btn" title="Logout"><span class="icon">🚪</span><span class="label">Logout</span></a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <h1>📈 Transaction History</h1>
+
+    <div class="card">
+      <h3>🔎 Filters</h3>
+      <div class="flex gap-10" style="flex-wrap: wrap;">
+        <div class="input-wrapper" style="flex:1; min-width:140px;">
+          <div class="glow-ring"></div>
+          <input type="text" id="filter-type" placeholder="Type (DEPOSIT/WITHDRAWAL)" />
+        </div>
+        <div class="input-wrapper" style="flex:1; min-width:140px;">
+          <div class="glow-ring"></div>
+          <input type="number" id="filter-group" placeholder="Group ID" />
+        </div>
+        <div class="input-wrapper" style="flex:1; min-width:140px;">
+          <div class="glow-ring"></div>
+          <input type="date" id="filter-start" />
+        </div>
+        <div class="input-wrapper" style="flex:1; min-width:140px;">
+          <div class="glow-ring"></div>
+          <input type="date" id="filter-end" />
+        </div>
+        <button id="apply-filter" class="btn-primary" style="flex:0 0 auto;"><span class="wrap">Apply Filters</span></button>
+      </div>
+    </div>
+
+    <div id="transactions-table" class="mt-20"></div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/pages/transactions.js"></script>
+</body>
+</html>

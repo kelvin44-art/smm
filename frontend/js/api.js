@@ -25,7 +25,7 @@ async function fetchDashboard() {
 }
 
 async function fetchMyWallets() {
-  return apiFetch('/api/wallets/me', { headers: authHeaders() });
+ return apiFetch('/api/wallets/me', { headers: authHeaders() });
 }
 
 async function deposit(amount) {
